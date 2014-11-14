@@ -24,12 +24,7 @@ cat("tau.hat=", tau.hat, "SE=", se.tauhat,"CI=",CI.tau, "\n")
 cat("mu.hat=", mu.hat, "SE=", se.mu.hat,"CI=",CI.mu, "\n")
 cat("mu.hat.1=", mu.hat.1, "SE=", se.mu.hat.1,"CI=",CI.mu1, "\n")
 }
-y.i<-c(560,190,260,370,190,130,170,170,60,110)
-M.i<-c(824,312,319,648,358,252,256,263,138,150)
-M<-sum(M.i) + 3687
-N<-33
-n<-10
-unbiased_cluster(y.i,M.i,M,N,n,0.05)
+
 
 ##ratio_cluster gives an estimate of the population total and a standard error. In addition it will 
 # at the given (1-alpha)*100% confidence level, the mean y value per secondary unit, and mean y value per 
@@ -52,4 +47,4 @@ ratio_cluster<-function(y.i,M.i,M,N,n,alpha){
   cat("tau.hat.r=", tau.hatr, "SE=", se.tauhatr,"CI=",CI.taur, "\n")
   cat("mu.hat.r=", mu.hatr, "SE=", se.muhatr,"CI=",CI.mur, "\n")
 }
-ratio_cluster(y.i,M.i,M,N,n,0.05)
+
